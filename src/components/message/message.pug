@@ -1,0 +1,9 @@
+mixin message(data)
+  .message(class=`${data.background ? `message--${data.background}` : ''} ${data.mod ? `message--${data.mod}` : ''}`)&attributes(attributes)
+    .message__avatar
+      img(src=data.avatar, alt="avatar")
+    .message__content
+      svg.message__subtract
+        use(href='img/sprite.svg#subtract')
+      .message__author=data.author
+      .message__text!=data.text

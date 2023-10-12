@@ -1,0 +1,58 @@
+.template
+  +message({
+    author: 'Eugeniy Sesin', 
+    text: 'Ларнака — Лимассол, 28.09,<br> в 6 утра, на бензин', 
+    avatar: 'img/males/male.png',
+    mod: 'long', 
+    background: 'blue'})(data-number='1')
+  +message({
+    author: 'Andy Bowie', 
+    text: 'Ларнака — Лимассол, 28.09,<br> в 6 утра, на бензин', 
+    avatar: 'img/males/male-1.png', 
+    background: 'yellow'})(data-number='4')
+  +message({
+    author: 'Semen Vishnevskiy', 
+    text: 'Кто нибудь едет из Пафоса в Ларнаку в ближайшее время? Нужно передать посылку', 
+    avatar: 'img/males/male-3.png', 
+    background: 'pink'})(data-number='2')
+  +message({
+    author: 'Pavel Velgir', 
+    text: 'Через 40 минут еду в Лимассол <br>— Пафос. На бензин', 
+    avatar: 'img/males/male-2.png',
+    mod: 'long', 
+    background: 'green'})(data-number='3')
+  +message({
+    author: 'Alexandr Ivashenko', 
+    text: 'В 19:00 еду из Лимассола в Ларнаку', 
+    avatar: 'img/males/male-4.png', 
+    background: 'violet'})(data-number='5')
+  .template__bg
+  .template__main
+    .template__website
+      .template__logo
+        img(src="img/logo.png", alt="compas-logo")
+      .template__name Compas
+    h1.template__title Приложение для поиска<br> попутчиков на Кипре
+    .template__subtitle 
+      | Публикуйте свои поездки<br class='mobile'> или присоединяйтесь к другим водителям.<br>
+      | С нами легко отправить посылку, забронировать места в машине,
+      | и ездить<br class='mobile'> с комфортом на основе отзывов<br class='mobile'> и предпочтений
+    .template__links
+      a(href="#").app-link 
+        .app-link__img
+          img(src="img/app-store-icon.svg", alt="apple-icon")
+        .app-link__text
+          img(src="img/app-store-text.svg", alt="Download on the App Store")
+      a(href="#").app-link 
+        .app-link__img
+          img(src="img/playmarket-icon.svg", alt="google-play-icon")
+        .app-link__text
+          img(src="img/playmarket-text.svg", alt="Get it on Goolge play")
+  .template__footer
+    a(href="#" data-modal='userAgreement').template__link Пользовательское соглашение
+    .decor
+    a(href="#").template__link Публичная оферта
+    .decor
+    a(href="#" data-modal='privacyPolicy').template__link Политика конфиденциальности
+
+
