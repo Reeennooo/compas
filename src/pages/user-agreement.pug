@@ -1,0 +1,23 @@
+extends ../pug/layout.pug
+
+block meta
+    title Compas: User agreement
+    meta(name='description', content='Compas: Carpooling Cyprus - your pick of rides at low prices!')
+
+//-block append head
+   link(rel='stylesheet', href='css/some.css')
+
+block header
+
+block content
+    include ../blocks/template/template
+        //- h1 Заголовок контента
+        //- svg(width="13" height="10")
+        //-     use(xlink:href="img/sprite.svg#check")
+    +side-modal()
+block footer
+
+//-block prepend page-bottom
+//-    include ../blocks/modal-test/modal-test
+//- block append page-bottom
+//-   script(src='js/some.js')

@@ -39,6 +39,9 @@ html(lang='ru')
         meta(name='msapplication-navbutton-color', content='#000')
         meta(name='apple-mobile-web-app-status-bar-style', content='#000')
 
+        //- Google Tag Manager
+        script(src="js/gtm.js")
+
         block meta
             title Compas: Carpooling Cyprus
 
@@ -48,7 +51,8 @@ html(lang='ru')
                 //-include ../js/head-script.js
 
     body
-        noscript У вас отключен JavaScript. Это пугает. You have JavaScript disabled. It scares.
+        noscript 
+            iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-NNFD3VDK" frameborder="0" height="0" width="0" style="display:none;visibility:hidden")
         .wrapper
             block header
                 include ../blocks/header/header
