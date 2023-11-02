@@ -1,6 +1,6 @@
 const modalData = {
     userAgreement: {
-        title: 'Пользовательское соглашение',
+        title: 'Terms of Service',
         text: `Last updated: 16 October 2023
         <br>
         <br>The following Terms of Service ("Terms"), govern Your access to and use of Compas services, including any content, functionality and services offered on or through https://compas.city ("Site"). 
@@ -241,7 +241,7 @@ const modalData = {
         `,
     },
     privacyPolicy: {
-        title: 'Политика конфиденциальности',
+        title: 'Privacy Policy',
         text: `Last updated: 16 October 2023
         <br>
         <br>1.	ABOUT US
@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (location.pathname.includes('user-agreement')) {
                 modalDataName = 'userAgreement';
             }
-            if (location.pathname.includes('privaci-policy')) {
+            if (location.pathname.includes('privacy-policy')) {
                 modalDataName = 'privacyPolicy';
             }
             if (location.pathname.includes('public-offer')) {
@@ -435,7 +435,15 @@ document.addEventListener('DOMContentLoaded', () => {
         function setData(modalName) {
             if (!modalData[modalName]) return;
             modalTitle.innerHTML = modalData[modalName].title;
+
             modalText.innerHTML = modalData[modalName].text;
+
+            if (modalName === 'privacyPolicy') {
+                modalTitle.dataset.translateKey = 'privacyLink';
+            } else if (modalName === 'userAgreement') {
+                modalTitle.dataset.translateKey = 'termsLink';
+            }
+            modalTitle.innerHTML = i18next.t(modalTitle.dataset.translateKey);
         }
 
         document.addEventListener('click', (event) => {

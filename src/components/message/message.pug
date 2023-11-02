@@ -6,4 +6,4 @@ mixin message(data)
       svg.message__subtract
         use(href='img/sprite.svg#subtract')
       .message__author=data.author
-      .message__text!=data.text
+      .message__text(data-translate-key=data.textAttr)!=data.text
